@@ -4,17 +4,17 @@ Atmega8A C++ library
 TOOLCHAIN_PATH & F_CPU needs to be set.
 ut/gtest submodule for UTs need to be included
 
-Built on:
-./avr-g++ --version
-avr-g++ (GCC) 6.2.0
-Copyright (C) 2016 Free Software Foundation, Inc.
+Built on: <br />
+./avr-g++ --version <br />
+avr-g++ (GCC) 6.2.0 <br />
+Copyright (C) 2016 Free Software Foundation, Inc. <br />
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-Library size\n
-----------------\n
-/home/kudl4t4/avr-toolchain/linux/bin/avr-size --totals libatm8a.0.1.a
-   text	   data	    bss	    dec	    hex	filename
+ <br />
+Library size <br />
+---------------- <br />
+/home/kudl4t4/avr-toolchain/linux/bin/avr-size --totals libatm8a.0.1.a <br />
+   text	   data	    bss	    dec	    hex	filename <br />
     466	      0	      4	    470	    1d6	ioport.o (ex libatm8a.0.1.a)
     190	      0	      2	    192	     c0	powerManagement.o (ex libatm8a.0.1.a)
     278	      0	      2	    280	    118	eeprom.o (ex libatm8a.0.1.a)
