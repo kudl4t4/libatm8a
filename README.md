@@ -11,8 +11,8 @@ Copyright (C) 2016 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-Library size
-----------------
+Library size\n
+----------------\n
 /home/kudl4t4/avr-toolchain/linux/bin/avr-size --totals libatm8a.0.1.a
    text	   data	    bss	    dec	    hex	filename
     466	      0	      4	    470	    1d6	ioport.o (ex libatm8a.0.1.a)
