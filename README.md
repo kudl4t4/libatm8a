@@ -3,6 +3,7 @@ Atmega8A C++ library
  <br />
 TOOLCHAIN_PATH & F_CPU needs to be set. <br />
 ut/gtest submodule for UTs need to be included <br />
+https://github.com/google/googletest <br />
  <br />
 Built on: <br />
 ./avr-g++ --version <br />
