@@ -12,7 +12,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. <br 
  <br />
 Library size <br />
 ---------------- <br />
-/home/kudl4t4/avr-toolchain/linux/bin/avr-size --totals libatm8a.0.2.3.a <br />
+./avr-size --totals libatm8a.0.2.3.a <br />
 <table>
 <tr><td>text</td><td>data</td><td>bss</td><td>dec</td><td>hex</td><td>filename</td></tr>
 <tr><td>494</td><td>0</td><td>4</td><td>470</td><td>1d6</td><td>ioport.o</td></tr>
