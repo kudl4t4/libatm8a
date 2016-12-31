@@ -3,21 +3,14 @@
 ioport_Struct volatile *ioport::_io;
 combined_Struct volatile *ioport::_cbS;
 
-void ioport::ioportB() {
-    _io = _iportB;
-    _cbS = _combined;
-}
-void ioport::ioportC() {
-    _io = _iportC;
-    _cbS = _combined;
-}
-void ioport::ioportD() {
-    _io = _iportD;
+void ioport::ioport() {
     _cbS = _combined;
 }
 
-void ioport::setOuputPinLow(unsigned char pinNo) {
+void ioport::setOutputPinLow(ioportXFunct func, unsigned char pinNo) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp |= 1 << pinNo;
@@ -28,8 +21,10 @@ void ioport::setOuputPinLow(unsigned char pinNo) {
     _io->_PORTx = tmp;
 }
 
-void ioport::setOutputPinHigh(unsigned char pinNo) {
+void ioport::setOutputPinHigh(ioportXFunct func, unsigned char pinNo) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp |= 1 << pinNo;
@@ -40,8 +35,10 @@ void ioport::setOutputPinHigh(unsigned char pinNo) {
     _io->_PORTx = tmp;
 }
 
-void ioport::setOutputPinToggle(unsigned char pinNo) {
+void ioport::setOutputPinToggle(ioportXFunct func, unsigned char pinNo) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp |= 1 << pinNo;
@@ -52,16 +49,20 @@ void ioport::setOutputPinToggle(unsigned char pinNo) {
     _io->_PORTx = tmp;
 }
 
-void ioport::setOutputPin(unsigned char pinNo) {
+void ioport::setOutputPin(ioportXFunct func, unsigned char pinNo) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp |= 1 << pinNo;
     _io->_DDRx = tmp;
 }
 
-void ioport::setOuputBitsLow(unsigned char bits) {
+void ioport::setOutputBitsLow(ioportXFunct func, unsigned char bits) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp |= bits;
@@ -72,8 +73,10 @@ void ioport::setOuputBitsLow(unsigned char bits) {
     _io->_PORTx = tmp;
 }
 
-void ioport::setOutputBitsHigh(unsigned char bits) {
+void ioport::setOutputBitsHigh(ioportXFunct func, unsigned char bits) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp |= bits;
@@ -84,8 +87,10 @@ void ioport::setOutputBitsHigh(unsigned char bits) {
     _io->_PORTx = tmp;
 }
 
-void ioport::setOutputBitsToggle(unsigned char bits) {
+void ioport::setOutputBitsToggle(ioportXFunct func, unsigned char bits) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp |= bits;
@@ -96,16 +101,20 @@ void ioport::setOutputBitsToggle(unsigned char bits) {
     _io->_PORTx = tmp;
 }
 
-void ioport::setOutputBits(unsigned char bits) {
+void ioport::setOutputBits(ioportXFunct func, unsigned char bits) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp |= bits;
     _io->_DDRx = tmp;
 }
 
-void ioport::setInputPulledUp(unsigned char pinNo) {
+void ioport::setInputPulledUp(ioportXFunct func, unsigned char pinNo) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     tmp &= ~(1 << pinNo);
@@ -116,8 +125,10 @@ void ioport::setInputPulledUp(unsigned char pinNo) {
     _io->_PORTx = tmp;
 }
 
-unsigned char ioport::readPin(unsigned char pinNo, bool *retValue) {
+unsigned char ioport::readPin(ioportXFunct func, unsigned char pinNo, bool *retValue) {
     unsigned char tmp;
+
+    func();
 
     tmp = _io->_DDRx;
     if ( (pinNo >> tmp) & 1 )

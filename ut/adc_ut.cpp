@@ -82,49 +82,49 @@ TEST_F(adc_ut, getLeftAdjustResult)
 }
 TEST_F(adc_ut, setChannel)
 {
-    adc::setChannel(adc::channel::adc0);
+    adc::setChannel(adc::channel::single_ended_input_adc0);
     EXPECT_EQ(0x00, readADMUX());
-    adc::setChannel(adc::channel::adc1);
+    adc::setChannel(adc::channel::single_ended_input_adc1);
     EXPECT_EQ(0x01, readADMUX());
-    adc::setChannel(adc::channel::adc2);
+    adc::setChannel(adc::channel::single_ended_input_adc2);
     EXPECT_EQ(0x02, readADMUX());
-    adc::setChannel(adc::channel::adc3);
+    adc::setChannel(adc::channel::single_ended_input_adc3);
     EXPECT_EQ(0x03, readADMUX());
-    adc::setChannel(adc::channel::adc4);
+    adc::setChannel(adc::channel::single_ended_input_adc4);
     EXPECT_EQ(0x04, readADMUX());
-    adc::setChannel(adc::channel::adc5);
+    adc::setChannel(adc::channel::single_ended_input_adc5);
     EXPECT_EQ(0x05, readADMUX());
-    adc::setChannel(adc::channel::adc6);
+    adc::setChannel(adc::channel::single_ended_input_adc6);
     EXPECT_EQ(0x06, readADMUX());
-    adc::setChannel(adc::channel::adc7);
+    adc::setChannel(adc::channel::single_ended_input_adc7);
     EXPECT_EQ(0x07, readADMUX());
-    adc::setChannel(adc::channel::_1_30V_Vbg);
+    adc::setChannel(adc::channel::single_ended_input_1_30V_Vbg);
     EXPECT_EQ(0x0E, readADMUX());
-    adc::setChannel(adc::channel::_0_00V_Gnd);
+    adc::setChannel(adc::channel::single_ended_input_0_00V_Gnd);
     EXPECT_EQ(0x0F, readADMUX());
 }
 TEST_F(adc_ut, getChannel)
 {
     writeADMUX(0x0F);
-    EXPECT_EQ(adc::channel::_0_00V_Gnd, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_0_00V_Gnd, adc::getChannel());
     writeADMUX(0x0E);
-    EXPECT_EQ(adc::channel::_1_30V_Vbg, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_1_30V_Vbg, adc::getChannel());
     writeADMUX(0x07);
-    EXPECT_EQ(adc::channel::adc7, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_adc7, adc::getChannel());
     writeADMUX(0x06);
-    EXPECT_EQ(adc::channel::adc6, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_adc6, adc::getChannel());
     writeADMUX(0x05);
-    EXPECT_EQ(adc::channel::adc5, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_adc5, adc::getChannel());
     writeADMUX(0x04);
-    EXPECT_EQ(adc::channel::adc4, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_adc4, adc::getChannel());
     writeADMUX(0x03);
-    EXPECT_EQ(adc::channel::adc3, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_adc3, adc::getChannel());
     writeADMUX(0x02);
-    EXPECT_EQ(adc::channel::adc2, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_adc2, adc::getChannel());
     writeADMUX(0x01);
-    EXPECT_EQ(adc::channel::adc1, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_adc1, adc::getChannel());
     writeADMUX(0x00);
-    EXPECT_EQ(adc::channel::adc0, adc::getChannel());
+    EXPECT_EQ(adc::channel::single_ended_input_adc0, adc::getChannel());
 }
 TEST_F(adc_ut, setEnable)
 {

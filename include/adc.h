@@ -35,16 +35,16 @@ namespace adc {
     };
 
     enum channel {
-        adc0,
-        adc1,
-        adc2,
-        adc3,
-        adc4,
-        adc5,
-        adc6,
-        adc7,
-        _1_30V_Vbg,
-        _0_00V_Gnd
+        single_ended_input_adc0,
+        single_ended_input_adc1,
+        single_ended_input_adc2,
+        single_ended_input_adc3,
+        single_ended_input_adc4,
+        single_ended_input_adc5,
+        single_ended_input_adc6,
+        single_ended_input_adc7,
+        single_ended_input_1_30V_Vbg,
+        single_ended_input_0_00V_Gnd
     };
 
     enum prescaler {

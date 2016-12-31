@@ -542,8 +542,8 @@ typedef struct {
  *      <th>Bit 0</th>
  *  </tr>
  *  <tr>
- *      <td>INT1</td>
- *      <td>INT0</td>
+ *      <td>INTF1</td>
+ *      <td>INTF0</td>
  *      <td>----</td>
  *      <td>----</td>
  *      <td>----</td>
@@ -552,8 +552,8 @@ typedef struct {
  *      <td>----</td>
  *  </tr>
  * </table>
- * \b INT1: External Interrupt Request 1 Enable
- * \n\b INT0: External Interrupt Request 0 Enable
+ * \b INTF1: External Interrupt Flag 1
+ * \n\b INTF0: External Interrupt Flag 0
  */
 /**
  * @var interrupts_Struct::_GICR
@@ -573,8 +573,8 @@ typedef struct {
  *      <th>Bit 0</th>
  *  </tr>
  *  <tr>
- *      <td>----</td>
- *      <td>----</td>
+ *      <td>INT1</td>
+ *      <td>INT0</td>
  *      <td>----</td>
  *      <td>----</td>
  *      <td>----</td>
@@ -583,7 +583,9 @@ typedef struct {
  *      <td>IVCE</td>
  *  </tr>
  * </table>
- * \b  IVSEL: Interrupt Vector Select
+ * \b INT1: External Interrupt Request 1 Enable
+ * \n\b INT0: External Interrupt Request 0 Enable
+ * \n\b  IVSEL: Interrupt Vector Select
  * \n\b IVCE: Interrupt Vector Change Enable
  */
 typedef struct {

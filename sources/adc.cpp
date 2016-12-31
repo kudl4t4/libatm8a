@@ -90,33 +90,33 @@ void adc::setChannel(adc::channel ch) {
     unsigned char val = 0x00;
 
     switch (ch) {
-        case adc::channel::adc0:
+        case adc::channel::single_ended_input_adc0:
             break;
-        case adc::channel::adc1:
+        case adc::channel::single_ended_input_adc1:
             val = 0x01;
             break;
-        case adc::channel::adc2:
+        case adc::channel::single_ended_input_adc2:
             val = 0x02;
             break;
-        case adc::channel::adc3:
+        case adc::channel::single_ended_input_adc3:
             val = 0x03;
             break;
-        case adc::channel::adc4:
+        case adc::channel::single_ended_input_adc4:
             val = 0x04;
             break;
-        case adc::channel::adc5:
+        case adc::channel::single_ended_input_adc5:
             val = 0x05;
             break;
-        case adc::channel::adc6:
+        case adc::channel::single_ended_input_adc6:
             val = 0x06;
             break;
-        case adc::channel::adc7:
+        case adc::channel::single_ended_input_adc7:
             val = 0x07;
             break;
-        case adc::channel::_1_30V_Vbg:
+        case adc::channel::single_ended_input_1_30V_Vbg:
             val = 0x0E;
             break;
-        case adc::channel::_0_00V_Gnd:
+        case adc::channel::single_ended_input_0_00V_Gnd:
             val = 0x0F;
             break;
     }
@@ -135,25 +135,25 @@ adc::channel adc::getChannel() {
 
     switch (tmp) {
         case 0x00:
-            return adc::channel::adc0;
+            return adc::channel::single_ended_input_adc0;
         case 0x01:
-            return adc::channel::adc1;
+            return adc::channel::single_ended_input_adc1;
         case 0x02:
-            return adc::channel::adc2;
+            return adc::channel::single_ended_input_adc2;
         case 0x03:
-            return adc::channel::adc3;
+            return adc::channel::single_ended_input_adc3;
         case 0x04:
-            return adc::channel::adc4;
+            return adc::channel::single_ended_input_adc4;
         case 0x05:
-            return adc::channel::adc5;
+            return adc::channel::single_ended_input_adc5;
         case 0x06:
-            return adc::channel::adc6;
+            return adc::channel::single_ended_input_adc6;
         case 0x07:
-            return adc::channel::adc7;
+            return adc::channel::single_ended_input_adc7;
         case 0x0E:
-            return adc::channel::_1_30V_Vbg;
+            return adc::channel::single_ended_input_1_30V_Vbg;
         case 0x0F:
-            return adc::channel::_0_00V_Gnd;
+            return adc::channel::single_ended_input_0_00V_Gnd;
     }
 }
 
