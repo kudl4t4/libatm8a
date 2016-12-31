@@ -31,5 +31,5 @@ Library size <br />
 <tr><td>758</td><td>0</td><td>4</td><td>762</td><td>2fa</td><td>timer2.o</td></tr>
 <tr><td>182</td><td>0</td><td>2</td><td>184</td><td>b8</td><td>avrStatus.o</td></tr>
 <tr><td>580</td><td>0</td><td>2</td><td>582</td><td>246</td><td>spi.o</td></tr>
-<tr><td>8486</td><td>0</td><td>43</td><td>8529</td><td>2151</td><td>(TOTALS)</td></tr>
+<tr><td>8514</td><td>0</td><td>43</td><td>8529</td><td>2151</td><td>(TOTALS)</td></tr>
 </table>
